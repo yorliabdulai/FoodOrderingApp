@@ -11,7 +11,7 @@ const HomePage = () => {
             <img src={landingImage} />
             <div className="flex flex-col items-center justify-center gap-4 text-center">
                 <span className="font-bold text-3xl tracking-tighter">
-                    Order takeaway even faster
+                    Order takeaway even faster!
                 </span>
                 <span>
                     Download the CampusChop App for faster ordering and exclusive app-only offers
