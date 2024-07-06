@@ -1,3 +1,5 @@
+import { Auth0Provider } from "@auth0/auth0-react";
+
 type Props = {
  children: React.ReactNode;
 }
@@ -12,6 +14,16 @@ const Auth0ProviderWithNavigate = ({children}:Props) => {
      "unable to initialize auth"
    );
  }
+ return (
+   <Auth0Provider 
+   domain={domain}
+   clientId={clientId}
+   authorizationParams={{
+    redirect_uri: redirectUri,
+   }}> 
+    {children} 
+   </Auth0Provider>
+ )
 }
 
 export default Auth0ProviderWithNavigate;
