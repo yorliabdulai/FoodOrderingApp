@@ -6,7 +6,7 @@ import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
 
 const UsernameMenu = () => {
-    const {user} = useAuth0();
+    const {user, logout} = useAuth0();
     return(
         <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center px-3 font-bold hover:text-orange-500 gap-2">
@@ -20,7 +20,7 @@ const UsernameMenu = () => {
                 </DropdownMenuItem> 
                 <Separator />
                 <DropdownMenuItem>
-                  <Button className="flex flex-1 font-bold bg-orange-500">Log Out</Button>
+                  <Button onClick={()=> logout()} className="flex flex-1 font-bold bg-orange-500">Log Out</Button>
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
