@@ -1,4 +1,4 @@
-import { Menu } from "lucide-react";
+import { CircleUserRound, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
@@ -13,7 +13,10 @@ const MobileNav = () => {
        </SheetTrigger> 
        <SheetContent className="space-y-3">
         <SheetTitle>
-          {isAuthenticated?(<span></span>): 
+          {isAuthenticated?(<span className="flex items-center font-bold gap-2">
+            <CircleUserRound className="text-orange-500" />
+            {user?.email}
+          </span>): 
           (<span>Welcome to CampusChop.com!</span>)}
         </SheetTitle>
         <Separator />
